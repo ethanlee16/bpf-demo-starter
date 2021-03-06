@@ -16,7 +16,7 @@ const client = new Pool({
 // Start an app that accepts HTTP requests.
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: true }));
 
 app.get("/paws", async (req, res) => {
   try {
